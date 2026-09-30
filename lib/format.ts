@@ -23,3 +23,16 @@ export function formatEventTime(start: Date, end: Date, locale: Locale): string 
   });
   return `${f.format(start)} – ${f.format(end)}`;
 }
+
+/** Nombre de día abreviado; 0 = domingo. Se calcula en UTC para no depender de la zona del servidor. */
+export function formatDayRange(days: number[], locale: Locale): string {
+  const f = new Intl.DateTimeFormat(intlLocale[locale], { weekday: "short", timeZone: "UTC" });
+  const name = (day: number) => f.format(new Date(Date.UTC(2026, 0, 4 + day))); // 4 ene 2026 es domingo
+  return days.length === 1 ? name(days[0]) : `${name(days[0])} – ${name(days[days.length - 1])}`;
+}
+
+export function formatIsoDate(iso: string, locale: Locale): string {
+  return new Intl.DateTimeFormat(intlLocale[locale], {
+    weekday: "long", day: "numeric", month: "long", timeZone: "UTC",
+  }).format(new Date(`${iso}T12:00:00Z`));
+}

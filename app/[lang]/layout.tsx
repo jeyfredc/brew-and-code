@@ -1,5 +1,7 @@
 import { Bricolage_Grotesque, Figtree, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import { Footer } from "@/components/layout/Footer";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 import { getDictionary } from "@/dictionaries/get-dictionary";
 import { hasLocale, locales } from "@/lib/i18n";
 import "../globals.css";
@@ -31,7 +33,9 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         >
           {dict.skipToContent}
         </a>
+        <SiteHeader lang={lang} dict={dict} />
         {children}
+        <Footer lang={lang} dict={dict} />
       </body>
     </html>
   );

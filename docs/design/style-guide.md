@@ -1,4 +1,4 @@
-# Brew & Code — Guía de estilos
+# Brew and Co — Guía de estilos
 
 Referencia visual: `docs/design/references/1.png` (landing de cafetería "Onea": fondo durazno-crema, titulares gruesos en chocolate, producto en vaso sobre un disco naranja, burbujas de categoría, miniaturas circulares de producto, botón píldora oscuro).
 Stack: Next.js 16 (App Router) · React 19 · Tailwind CSS v4 · TypeScript.
@@ -11,11 +11,11 @@ Lo que hace memorable la marca (y lo único que puede "gritar"): **el disco de c
 
 Qué tomamos de la referencia y qué cambiamos:
 
-| Referencia | Brew & Code |
+| Referencia | Brew and Co |
 |---|---|
 | Paleta crema + chocolate + naranja | Se mantiene (es el brief). Acento naranja usado con disciplina: relleno, nunca texto pequeño. |
 | Sans geométrica genérica | **Bricolage Grotesque** en titulares: más carácter, sigue siendo redonda y gruesa. |
-| Logo "Onea." con punto | Wordmark **Brew & Code** con el "&" como detalle (ver §7). |
+| Logo "Onea." con punto | Wordmark **Brew and Co** con "and" en `naranja-fuerte` como detalle (ver §7). |
 | Solo modo claro | Se añade modo oscuro "café tostado" (el proyecto ya usa `prefers-color-scheme`). |
 
 ## 2. Color
@@ -30,11 +30,12 @@ Qué tomamos de la referencia y qué cambiamos:
 | `tostado` | `#6B5245` | Texto secundario |
 | `linea` | `#D9C2AE` | Divisores, bordes suaves |
 | `naranja` | `#E2702F` | Acento de marca (relleno: discos, badges, play) |
-| `naranja-fuerte` | `#C4511A` | Acento para texto, enlaces y foco |
+| `naranja-fuerte` | `#C4511A` | Acento para texto grande, subrayados, anillo de foco y rellenos de botón |
+| `naranja-profundo` | `#A94215` | Hover del botón de acento |
 | `precio` | `#8A2E14` | Precios |
 
 ### Halos de categoría (discos detrás de producto)
-`mostaza #EDB95A` Café · `menta #2F7D5B` Bebidas · `durazno #F2936B` Té · `frambuesa #C9476A` Panadería · `naranja #E2702F` destacado/promo.
+`mostaza #EDB95A` Espresso drinks · `menta #2F7D5B` Cold drinks · `durazno #F2936B` Sandwiches · `frambuesa #C9476A` Pastries · `naranja #E2702F` destacado/promo.
 
 ### Contraste (WCAG 2.2 AA, calculado)
 | Combinación | Ratio | Uso permitido |
@@ -42,7 +43,10 @@ Qué tomamos de la referencia y qué cambiamos:
 | `espresso` sobre `crema` | ≈ 14:1 | Todo |
 | `tostado` sobre `crema` | ≈ 5.8:1 | Texto secundario |
 | `espresso` sobre `naranja` | ≈ 5.3:1 | Texto sobre relleno naranja |
-| Blanco sobre `naranja-fuerte` | ≈ 4.6:1 | Botón de acento, texto pequeño |
+| Blanco sobre `naranja-fuerte` | ≈ 4.6:1 | Botón de acento |
+| Blanco sobre `naranja-profundo` | ≈ 6:1 | Hover del botón de acento |
+| `naranja-fuerte` sobre `crema` | ≈ 3.75:1 | Solo texto grande (≥ 24px, o ≥ 18.66px en negrita), subrayados, anillo de foco, rellenos |
+| `precio` sobre `crema` / `espuma` | ≈ 7.8:1 | Texto pequeño, enlaces, precios y mensajes de error |
 | Blanco sobre `naranja` | ≈ 3.3:1 | **Prohibido** para texto < 24px |
 
 Regla: el naranja claro nunca lleva texto blanco. Verifica con una herramienta de contraste antes de añadir combinaciones nuevas.
@@ -76,7 +80,7 @@ Reglas:
 - Párrafos: máx. 60 caracteres por línea (`max-w-[34ch]` a `max-w-prose`), color `tostado`.
 - Sentence case en todo. Sin mayúsculas sostenidas, salvo las leyendas de 12px bajo las burbujas de categoría (herencia de la referencia; son texto corto y fijo).
 - No resaltar una sola palabra del titular con otro color o cursiva.
-- Precios: Bricolage 700, color `precio`, formato `$30.000` (COP, separador de miles con punto).
+- Precios: Bricolage 700, color `precio`, en libras: `£3.60` (en-GB) y `3,60 £` (es-ES), siempre con `Intl.NumberFormat`.
 
 ## 4. Espaciado y layout
 
@@ -89,7 +93,7 @@ Reglas:
 ### Hero (escritorio ≥ lg)
 ```
 ┌────────────────────────────────────────────────────────┐
-│ ▢ Brew & Code      Inicio Tienda Menú Blog    (Buscar) │
+│ ▢ Brew and Co      Inicio Tienda Menú Blog    (Buscar) │
 │ ────────────────────────────────────────────────────── │
 │ Titular grande                     ╭──────╮   ● Café   │
 │ en tres líneas                     │ VASO │   ● Bebidas│
@@ -98,7 +102,7 @@ Reglas:
 │ [ Ver promo ● ]                    ╰──────╯            │
 ├────────────────────────────────────────────────────────┤  ← cambio de fondo crema → espuma
 │ (●) Nombre     (●) Nombre     (●) Nombre               │
-│     $30.000        $40.000        $35.000              │
+│     £3.80          £3.20          £7.50                 │
 └────────────────────────────────────────────────────────┘
 ```
 Móvil: columna única. Orden: navegación → producto sobre disco → titular → párrafo → CTA → burbujas de categoría en fila con scroll horizontal → productos en lista vertical.
@@ -123,8 +127,8 @@ Las burbujas de categoría van en arco a la derecha del producto en escritorio (
 
 ## 7. Logo y marca
 
-- Wordmark: "Brew & Code" en Bricolage 800. El "&" en `naranja-fuerte`. Icono: vaso de papel dentro de un círculo `espresso` (24px en cabecera).
-- Nombre siempre "Brew & Code" (en código y URLs: `brew-and-code`).
+- Wordmark: "Brew and Co" en Bricolage 800. "and" en `naranja-fuerte` (24px en negrita = texto grande). Icono: vaso de papel dentro de un círculo `espresso` (24px en cabecera).
+- Nombre siempre "Brew and Co" (en código y URLs: `brew-and-code`).
 - Espacio libre mínimo alrededor del logo: alto del "B".
 
 ## 8. Implementación en el stack

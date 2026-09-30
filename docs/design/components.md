@@ -1,4 +1,4 @@
-# Brew & Code — Especificaciones de componentes
+# Brew and Co — Especificaciones de componentes
 
 Stack: React 19 + Next.js 16 (App Router) + Tailwind v4 + TypeScript. Tokens en `tokens.css` / `design-tokens.json`.
 
@@ -20,20 +20,19 @@ Stack: React 19 + Next.js 16 (App Router) + Tailwind v4 + TypeScript. Tokens en 
 |---|---|---|
 | `variant` | `"primary" \| "accent" \| "ghost"` | `"primary"` |
 | `size` | `"md" \| "lg"` | `"md"` |
-| `icon` | `ReactNode` (opcional, al final) | — |
 | `asChild` / `href` | renderiza `<a>`/`Link` si hay `href` | — |
 
 - Forma: `rounded-full`, alto `md` 44px · `lg` 52px, padding-x 24px (`px-6`), `font-sans font-semibold text-base`.
-- `primary`: `bg-espresso text-espuma`; hover `bg-cacao`. (Referencia: "Get Promo".)
-- `accent`: `bg-naranja-fuerte text-white`; hover `bg-[#A94215]`.
+- `primary`: `bg-foreground text-background` (se invierte en modo oscuro); hover `bg-cacao` (oscuro: `bg-espuma`). (Referencia: "Get Promo".)
+- `accent`: `bg-naranja-fuerte text-white`; hover `bg-naranja-profundo`.
 - `ghost`: `border border-line text-foreground`; hover `bg-surface`.
-- `icon`: círculo de 24px `bg-naranja text-espresso` dentro del botón (el "play" de la referencia). Decorativo (`aria-hidden`).
+- `light`: `bg-espuma text-espresso`; hover `bg-crema`. Para fondos oscuros o sobre fotos.
 - Disabled: `opacity-50 cursor-not-allowed`, sin hover.
 - Transición `colors 120ms`.
 - Es `<button type="button">` por defecto; si navega, es enlace.
 
 ```tsx
-<Button variant="primary" size="lg" icon={<PlayIcon />}>Ver promo</Button>
+<Button variant="primary" size="lg">Ver menú</Button>
 ```
 
 ## SiteHeader
@@ -46,10 +45,12 @@ Stack: React 19 + Next.js 16 (App Router) + Tailwind v4 + TypeScript. Tokens en 
 
 ## Logo
 
-- Icono vaso 24px en círculo `espresso` + texto "Brew & Code" (Bricolage 800, 24px). "&" en `naranja-fuerte`.
-- Siempre enlaza a `/`; `aria-label="Brew & Code, inicio"`.
+- Icono vaso 24px en círculo `espresso` + texto "Brew and Co" (Bricolage 800, 24px). "and" en `naranja-fuerte`; `aria-label="Brew and Co, inicio"`.
+- Siempre enlaza a `/`; `aria-label="Brew and Co, inicio"`.
 
 ## SearchField (client)
+
+> Errores de formulario y mensajes pequeños: `text-price` (≥ 4.5:1). Nunca `naranja-fuerte` en texto pequeño.
 
 - `<form role="search">` con `<label class="sr-only">Buscar en el menú</label>`.
 - Píldora `bg-surface shadow-search`, alto 40px, ancho 240px (escritorio) / icono-solo con expansión en móvil.
@@ -73,6 +74,8 @@ Stack: React 19 + Next.js 16 (App Router) + Tailwind v4 + TypeScript. Tokens en 
 
 ## ProductDisc
 
+> Con fotos de stock (rectangulares, sin fondo transparente) la imagen se recorta en círculo (`overflow-hidden rounded-full`, inset 8px) sobre un disco más grande del color del tono. El efecto de "salir del disco" solo aplica a PNG recortados.
+
 Bloque base de marca: imagen de producto sobre un círculo de color.
 
 | Prop | Tipo | Notas |
@@ -88,7 +91,7 @@ Bloque base de marca: imagen de producto sobre un círculo de color.
 
 - Círculo 72px `bg-{tone}` con icono/imagen 40px; leyenda debajo: `text-xs font-bold` mayúsculas, `text-espresso`, `mt-2`.
 - Es enlace (`/menu?categoria=cafe`), objetivo táctil ≥ 72px. Hover: escala 1.06 (200ms). Seleccionada: anillo 3px `espresso` con offset 2px + `aria-current="true"`.
-- Mapeo: Café→mostaza · Bebidas→menta · Té→durazno · Panadería→frambuesa.
+- Mapeo: Espresso drinks→mostaza · Cold drinks→menta · Sandwiches→durazno · Pastries→frambuesa.
 
 ## ProductListItem
 

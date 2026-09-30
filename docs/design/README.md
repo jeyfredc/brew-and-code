@@ -1,4 +1,4 @@
-# Sistema de diseño — Brew & Code
+# Sistema de diseño — Brew and Co
 
 | Archivo | Contenido |
 |---|---|

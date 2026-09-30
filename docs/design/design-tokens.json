@@ -1,5 +1,5 @@
 {
-  "$description": "Brew & Code — design tokens (fuente de verdad). Espejo en tokens.css (Tailwind v4 @theme).",
+  "$description": "Brew and Co — design tokens (fuente de verdad). Espejo en tokens.css (Tailwind v4 @theme).",
   "color": {
     "crema":      { "$value": "#F6E6D6", "$description": "Fondo hero / superficie base" },
     "espuma":     { "$value": "#FFF4EE", "$description": "Fondo secundario (franja de productos), tarjetas" },
@@ -8,10 +8,11 @@
     "tostado":    { "$value": "#6B5245", "$description": "Texto secundario (5.8:1 sobre crema)" },
     "linea":      { "$value": "#D9C2AE", "$description": "Divisores y bordes suaves" },
     "naranja":    { "$value": "#E2702F", "$description": "Acento de marca — SOLO relleno; texto encima = espresso" },
-    "naranja-fuerte": { "$value": "#C4511A", "$description": "Acento para texto/enlaces/focus (4.6:1 con blanco)" },
+    "naranja-fuerte": { "$value": "#C4511A", "$description": "Texto grande, subrayados, focus y rellenos de botón (4.6:1 con blanco; 3.75:1 sobre crema)" },
+    "naranja-profundo": { "$value": "#A94215", "$description": "Hover del botón de acento (6:1 con blanco)" },
     "mostaza":    { "$value": "#EDB95A", "$description": "Halo de producto, categoría Café" },
     "menta":      { "$value": "#2F7D5B", "$description": "Halo de categoría Bebidas; estado éxito" },
-    "frambuesa":  { "$value": "#C9476A", "$description": "Halo de categoría Panadería; estado error" },
+    "frambuesa":  { "$value": "#C9476A", "$description": "Halo de categoría Pastries; estado error" },
     "durazno":    { "$value": "#F2936B", "$description": "Halo de categoría Té" },
     "precio":     { "$value": "#8A2E14", "$description": "Precios" }
   },

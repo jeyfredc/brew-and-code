@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "siteName": "Brew and Co",
+    "home": {
+      "title": "Brew and Co | Café de especialidad en Londres",
+      "description": "Cafetería de barrio con café de especialidad, pasteles frescos y almuerzos ligeros. Micrófono abierto los viernes y cata de café los sábados."
+    },
+    "about": {
+      "title": "Nuestra historia | Brew and Co",
+      "description": "Conoce a los dos amigos que abrieron Brew and Co, una cafetería de especialidad de barrio en Londres."
+    },
+    "menu": {
+      "title": "Menú | Brew and Co",
+      "description": "Bebidas espresso, pasteles frescos, sándwiches y bebidas frías. Consulta el menú completo de Brew and Co con precios."
+    }
+  },
+  "skipToContent": "Saltar al contenido",
+  "nav": { "label": "Principal", "home": "Inicio", "menu": "Menú", "about": "Nosotros" },
+  "language": { "label": "Idioma", "en": "English", "es": "Español" },
+  "hero": {
+    "title": "El café de tu barrio, hecho como debe ser.",
+    "subtitle": "Café de especialidad, pasteles horneados esta mañana y almuerzos ligeros, en tu esquina.",
+    "viewMenu": "Ver el menú"
+  },
+  "popular": {
+    "title": "Lo más pedido",
+    "intro": "Lo primero que piden nuestros clientes habituales.",
+    "viewAll": "Ver el menú completo"
+  },
+  "events": {
+    "title": "Próximos eventos",
+    "intro": "Cada semana, ven por el café y quédate por la compañía.",
+    "items": {
+      "openMic": {
+        "title": "Noche de micrófono abierto",
+        "description": "Apúntate en el mostrador y toca, lee o canta. Todos escuchan, todos aplauden."
+      },
+      "tasting": {
+        "title": "Cata de café del sábado",
+        "description": "Prueba tres cafés de origen único con nuestro tostador y aprende qué buscar en la taza."
+      }
+    }
+  },
+  "badges": { "popular": "Popular", "house-favourite": "Favorito de la casa" },
+  "categories": {
+    "espresso": "Bebidas espresso",
+    "pastries": "Pasteles",
+    "sandwiches": "Sándwiches",
+    "cold": "Bebidas frías"
+  },
+  "menu": {
+    "title": "Nuestro menú",
+    "intro": "Café de pequeños tostadores, pasteles horneados cada mañana y almuerzos hechos al momento. Precios en libras.",
+    "jumpTo": "Ir a una categoría"
+  },
+  "about": {
+    "title": "Dos amigos, una esquina y mucho café",
+    "imageAlt": "Dos baristas trabajando detrás del mostrador de una cafetería",
+    "caption": "Maya Okafor y Tom Hargreaves, fundadores de Brew and Co.",
+    "paragraphs": [
+      "Maya pasó seis años sacando espressos en cafeterías ajenas. Tom los pasó en una oficina a tres calles del puesto del mercado donde ella servía café los sábados. Era su cliente más fiel.",
+      "En 2019, sobre una taza que se enfrió mientras hablaban, decidieron que el barrio necesitaba una cafetería que se tomara el café en serio sin tomarse a sí misma demasiado en serio.",
+      "Tardaron dos años en encontrar la esquina, un invierno en pintarla y muchas escaleras prestadas. Abrimos con cuatro mesas, un molino y un menú escrito a mano.",
+      "Compramos a pequeños tostadores que hemos visitado y horneamos cada mañana: los croissants antes de las siete, los brownies cuando ya hay clientes en la puerta. Los almuerzos son sencillos, hechos al momento y los termina quien esté más cerca de la cocina.",
+      "El micrófono abierto empezó porque una clienta preguntó si podía tocar una canción. Ahora llena el local cada viernes. Las catas del sábado empezaron porque no parábamos de hablar de café y alguien dijo que deberíamos invitar a la gente a probarlo con nosotros."
+    ],
+    "closing": "Ven a saludarnos. La tetera siempre está caliente y casi siempre queda un sitio junto a la ventana."
+  },
+  "booking": {
+    "open": "Reservar una mesa",
+    "title": "Reservar una mesa",
+    "description": "Dinos cuándo quieres venir y tendremos una mesa lista.",
+    "fields": {
+      "name": "Tu nombre",
+      "partySize": "Número de personas",
+      "partySizeHint": "Para más de 12 personas, llámanos.",
+      "date": "Fecha",
+      "time": "Hora"
+    },
+    "personOne": "1 persona",
+    "personMany": "{n} personas",
+    "submit": "Reservar mesa",
+    "submitting": "Enviando…",
+    "close": "Cerrar",
+    "success": {
+      "title": "Mesa reservada",
+      "message": "Gracias, {name}. Hemos anotado una mesa para {partySize} el {date} a las {time}."
+    },
+    "errors": {
+      "nameLength": "Escribe tu nombre (de 2 a 60 caracteres).",
+      "partySizeRange": "Elige entre 1 y 12 personas.",
+      "dateInvalid": "Escribe una fecha válida.",
+      "datePast": "Elige hoy o una fecha posterior.",
+      "dateTooFar": "Aceptamos reservas hasta con 60 días de antelación.",
+      "timeInvalid": "Escribe una hora válida, por ejemplo 18:30.",
+      "timeClosed": "A esa hora estamos cerrados. Elige una hora dentro del horario.",
+      "timePast": "Elige una hora posterior a la actual.",
+      "submitFailed": "No pudimos enviar tu solicitud. Inténtalo de nuevo en un momento."
+    }
+  },
+  "footer": {
+    "visit": "Visítanos",
+    "hoursTitle": "Horario",
+    "phoneLabel": "Teléfono",
+    "rights": "© {year} Brew and Co"
+  }
+}

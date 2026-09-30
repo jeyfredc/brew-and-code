@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "siteName": "Brew and Co",
+    "home": {
+      "title": "Brew and Co | Specialty coffee in London",
+      "description": "Neighbourhood café serving specialty coffee, fresh pastries and light lunches. Open mic every Friday, coffee tasting every Saturday."
+    },
+    "about": {
+      "title": "Our story | Brew and Co",
+      "description": "Meet the two friends who opened Brew and Co, a neighbourhood specialty coffee shop in London."
+    },
+    "menu": {
+      "title": "Menu | Brew and Co",
+      "description": "Espresso drinks, fresh pastries, sandwiches and cold drinks. See the full Brew and Co menu with prices."
+    }
+  },
+  "skipToContent": "Skip to content",
+  "nav": { "label": "Main", "home": "Home", "menu": "Menu", "about": "About us" },
+  "language": { "label": "Language", "en": "English", "es": "Español" },
+  "hero": {
+    "title": "Your neighbourhood coffee, done properly.",
+    "subtitle": "Specialty coffee, pastries baked this morning and light lunches, right on your corner.",
+    "viewMenu": "See the menu"
+  },
+  "popular": {
+    "title": "Most ordered",
+    "intro": "What our regulars ask for first.",
+    "viewAll": "See the full menu"
+  },
+  "events": {
+    "title": "What's on",
+    "intro": "Every week, come for the coffee and stay for the company.",
+    "items": {
+      "openMic": {
+        "title": "Open mic night",
+        "description": "Sign up at the counter and play, read or sing. Everyone listens, everyone claps."
+      },
+      "tasting": {
+        "title": "Saturday coffee tasting",
+        "description": "Taste three single-origin coffees with our roaster and learn what to look for in the cup."
+      }
+    }
+  },
+  "badges": { "popular": "Popular", "house-favourite": "House favourite" },
+  "categories": {
+    "espresso": "Espresso drinks",
+    "pastries": "Pastries",
+    "sandwiches": "Sandwiches",
+    "cold": "Cold drinks"
+  },
+  "menu": {
+    "title": "Our menu",
+    "intro": "Coffee from small roasters, pastries baked each morning and lunches made to order. Prices in pounds.",
+    "jumpTo": "Jump to a category"
+  },
+  "about": {
+    "title": "Two friends, one corner, a lot of coffee",
+    "imageAlt": "Two baristas working behind a café counter",
+    "caption": "Maya Okafor and Tom Hargreaves, founders of Brew and Co.",
+    "paragraphs": [
+      "Maya spent six years pulling shots in other people's cafés. Tom spent them in an office three streets from the market stall where she served coffee on Saturdays. He was her most regular regular.",
+      "In 2019, over a cup that went cold while they talked, they decided the neighbourhood needed a café that took coffee seriously without taking itself seriously.",
+      "It took two years to find the corner, one winter to paint it and a great many borrowed ladders. We opened with four tables, one grinder and a hand-written menu.",
+      "We buy from small roasters we have visited, and we bake every morning: the croissants before seven, the brownies while the first customers are already at the door. Lunches are simple, made to order and usually finished by whoever is nearest the kitchen.",
+      "The open mic began because a regular asked if she could play one song. Now it fills the room every Friday. The Saturday tastings began because we couldn't stop talking about coffee, and someone said we should invite people to taste along."
+    ],
+    "closing": "Come and say hello. The kettle is always on, and there is usually a seat by the window."
+  },
+  "booking": {
+    "open": "Reserve a table",
+    "title": "Reserve a table",
+    "description": "Tell us when you'd like to come and we'll have a table ready.",
+    "fields": {
+      "name": "Your name",
+      "partySize": "Number of people",
+      "partySizeHint": "For more than 12 people, please call us.",
+      "date": "Date",
+      "time": "Time"
+    },
+    "personOne": "1 person",
+    "personMany": "{n} people",
+    "submit": "Reserve table",
+    "submitting": "Sending…",
+    "close": "Close",
+    "success": {
+      "title": "Table reserved",
+      "message": "Thanks, {name}. We've noted a table for {partySize} on {date} at {time}."
+    },
+    "errors": {
+      "nameLength": "Enter your name (2 to 60 characters).",
+      "partySizeRange": "Choose between 1 and 12 people.",
+      "dateInvalid": "Enter a valid date.",
+      "datePast": "Choose today or a later date.",
+      "dateTooFar": "We take reservations up to 60 days ahead.",
+      "timeInvalid": "Enter a valid time, for example 18:30.",
+      "timeClosed": "We're closed at that time. Choose a time during opening hours.",
+      "timePast": "Choose a time later than now.",
+      "submitFailed": "We couldn't send your request. Try again in a moment."
+    }
+  },
+  "footer": {
+    "visit": "Visit us",
+    "hoursTitle": "Opening hours",
+    "phoneLabel": "Phone",
+    "rights": "© {year} Brew and Co"
+  }
+}

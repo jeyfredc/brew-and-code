@@ -1,0 +1,99 @@
+/*
+ * Brew & Code — tokens para Tailwind v4.
+ * Uso: copiar a app/globals.css (reemplaza el bloque :root / @theme inline actual)
+ * o importar: @import "../docs/design/tokens.css";  (después de @import "tailwindcss")
+ * Espejo de design-tokens.json: si cambias uno, cambia el otro.
+ */
+
+:root {
+  --background: #f6e6d6;
+  --surface: #fff4ee;
+  --foreground: #2a1810;
+  --muted: #6b5245;
+  --line: #d9c2ae;
+  --price: #8a2e14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c110b;
+    --surface: #2a1810;
+    --foreground: #f6e6d6;
+    --muted: #cdb5a2;
+    --line: #4a3426;
+    --price: #f2a07a;
+  }
+}
+
+@theme inline {
+  /* Semánticos (cambian con el tema) → bg-background, text-foreground, bg-surface, text-muted, border-line, text-price */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-price: var(--price);
+
+  /* Marca (fijos) */
+  --color-crema: #f6e6d6;
+  --color-espuma: #fff4ee;
+  --color-espresso: #2a1810;
+  --color-cacao: #5a2e1c;
+  --color-naranja: #e2702f;
+  --color-naranja-fuerte: #c4511a;
+  --color-mostaza: #edb95a;
+  --color-menta: #2f7d5b;
+  --color-frambuesa: #c9476a;
+  --color-durazno: #f2936b;
+
+  /* Tipografía (las variables las define next/font en app/layout.tsx) */
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --text-4xl: clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem);
+  --text-4xl--line-height: 1.08;
+  --text-5xl: clamp(2.75rem, 1.8rem + 4.2vw, 5rem);
+  --text-5xl--line-height: 1.02;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-frame: 24px;
+
+  /* Sombras */
+  --shadow-search: 0 6px 18px -6px rgb(42 24 16 / 0.18);
+  --shadow-float: 0 28px 40px -24px rgb(42 24 16 / 0.45);
+
+  /* Contenedor */
+  --container-page: 1120px;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Foco visible global */
+:focus-visible {
+  outline: 3px solid var(--color-naranja-fuerte);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

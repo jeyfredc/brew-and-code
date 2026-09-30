@@ -1,0 +1,21 @@
+categoria,nombre,descripcion,precio,insignia
+Bebidas espresso,Espresso,"Shot doble de espresso de origen único, intenso y con crema espesa.",6500,
+Bebidas espresso,Americano,"Espresso alargado con agua caliente, suave y limpio en taza.",7000,
+Bebidas espresso,Cappuccino,"Espresso con leche vaporizada y una capa gruesa de espuma cremosa.",9500,Popular
+Bebidas espresso,Latte de vainilla,"Espresso con leche texturizada y sirope artesanal de vainilla.",11000,
+Bebidas espresso,Flat white,"Doble ristretto con leche sedosa y microespuma, servido en taza corta.",10000,
+Bebidas espresso,Mocca de la casa,"Espresso, chocolate oscuro derretido y leche, coronado con crema batida.",12500,Favorito de la casa
+Bebidas espresso,Macchiato de caramelo,"Espresso manchado con leche espumada y un hilo de caramelo salado.",10500,
+Pasteles,Croissant de mantequilla,"Hojaldrado y dorado, horneado cada mañana con mantequilla francesa.",8500,Popular
+Pasteles,Brownie de chocolate,"Brownie denso de cacao 70% con nueces y centro húmedo.",9000,Favorito de la casa
+Pasteles,Torta de zanahoria,"Porción de torta con nueces y frosting de queso crema.",11500,
+Pasteles,Cheesecake de frutos rojos,"Base de galleta, crema suave y salsa de fresa y mora.",13000,
+Pasteles,Galleta de chips de chocolate,"Galleta grande, crujiente por fuera y suave por dentro.",6000,
+Sandwiches,Sándwich de pollo y pesto,"Pechuga de pollo a la plancha, pesto de albahaca, tomate y queso mozzarella en pan ciabatta.",18500,Popular
+Sandwiches,Club de jamón y queso,"Jamón serrano, queso holandés, lechuga y tomate en pan de molde tostado.",16500,
+Sandwiches,Tostada de aguacate,"Pan de masa madre, aguacate, huevo pochado y semillas de sésamo.",17000,Favorito de la casa
+Sandwiches,Croissant de jamón y queso,"Croissant relleno de jamón y queso gratinado, servido caliente.",14500,
+Bebidas frías,Cold brew,"Café infusionado en frío por 16 horas, servido con hielo. Sin azúcar.",10500,Popular
+Bebidas frías,Frappé de chocolate,"Chocolate, leche y hielo licuados, con crema batida y salsa de cacao.",13500,Favorito de la casa
+Bebidas frías,Té helado de durazno,"Té negro infusionado con durazno natural y hielo. Sin lácteos.",8500,
+Bebidas frías,Limonada de coco,"Limón natural, crema de coco y hielo, batida al momento.",9500,

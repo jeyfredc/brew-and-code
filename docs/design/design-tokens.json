@@ -1,0 +1,75 @@
+{
+  "$description": "Brew & Code — design tokens (fuente de verdad). Espejo en tokens.css (Tailwind v4 @theme).",
+  "color": {
+    "crema":      { "$value": "#F6E6D6", "$description": "Fondo hero / superficie base" },
+    "espuma":     { "$value": "#FFF4EE", "$description": "Fondo secundario (franja de productos), tarjetas" },
+    "espresso":   { "$value": "#2A1810", "$description": "Texto principal, botón primario" },
+    "cacao":      { "$value": "#5A2E1C", "$description": "Titulares secundarios, bordes fuertes" },
+    "tostado":    { "$value": "#6B5245", "$description": "Texto secundario (5.8:1 sobre crema)" },
+    "linea":      { "$value": "#D9C2AE", "$description": "Divisores y bordes suaves" },
+    "naranja":    { "$value": "#E2702F", "$description": "Acento de marca — SOLO relleno; texto encima = espresso" },
+    "naranja-fuerte": { "$value": "#C4511A", "$description": "Acento para texto/enlaces/focus (4.6:1 con blanco)" },
+    "mostaza":    { "$value": "#EDB95A", "$description": "Halo de producto, categoría Café" },
+    "menta":      { "$value": "#2F7D5B", "$description": "Halo de categoría Bebidas; estado éxito" },
+    "frambuesa":  { "$value": "#C9476A", "$description": "Halo de categoría Panadería; estado error" },
+    "durazno":    { "$value": "#F2936B", "$description": "Halo de categoría Té" },
+    "precio":     { "$value": "#8A2E14", "$description": "Precios" }
+  },
+  "colorDark": {
+    "fondo":      { "$value": "#1C110B" },
+    "superficie": { "$value": "#2A1810" },
+    "texto":      { "$value": "#F6E6D6" },
+    "texto-suave":{ "$value": "#CDB5A2" },
+    "linea":      { "$value": "#4A3426" },
+    "precio":     { "$value": "#F2A07A" }
+  },
+  "font": {
+    "display": { "$value": "'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif", "$description": "Titulares, logo, precios" },
+    "body":    { "$value": "'Figtree', ui-sans-serif, system-ui, sans-serif", "$description": "UI y texto corrido" },
+    "mono":    { "$value": "var(--font-geist-mono), ui-monospace, monospace", "$description": "Solo bloques de código (contenido del blog)" }
+  },
+  "fontSize": {
+    "xs":   { "size": "0.75rem",  "line": "1.2rem" },
+    "sm":   { "size": "0.875rem", "line": "1.4rem" },
+    "base": { "size": "1rem",     "line": "1.65rem" },
+    "lg":   { "size": "1.125rem", "line": "1.8rem" },
+    "xl":   { "size": "1.375rem", "line": "1.9rem" },
+    "2xl":  { "size": "1.75rem",  "line": "2.1rem" },
+    "3xl":  { "size": "2.25rem",  "line": "2.6rem" },
+    "4xl":  { "size": "clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem)", "line": "1.08" },
+    "5xl":  { "size": "clamp(2.75rem, 1.8rem + 4.2vw, 5rem)",   "line": "1.02" }
+  },
+  "fontWeight": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700, "extrabold": 800 },
+  "letterSpacing": { "display": "-0.02em", "body": "0", "button": "0.01em" },
+  "spacing": {
+    "unit": "4px",
+    "scale": ["0", "4", "8", "12", "16", "24", "32", "48", "64", "96", "128"]
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "16px",
+    "lg": "28px",
+    "frame": "24px",
+    "pill": "9999px",
+    "circle": "50%"
+  },
+  "shadow": {
+    "search": "0 6px 18px -6px rgb(42 24 16 / 0.18)",
+    "float":  "0 28px 40px -24px rgb(42 24 16 / 0.45)",
+    "focus":  "0 0 0 3px #FFF4EE, 0 0 0 5px #C4511A"
+  },
+  "layout": {
+    "container": "1120px",
+    "gutter": { "mobile": "16px", "tablet": "32px", "desktop": "40px" },
+    "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px" }
+  },
+  "motion": {
+    "duration": { "fast": "120ms", "base": "200ms", "slow": "420ms" },
+    "easing": { "out": "cubic-bezier(0.22, 1, 0.36, 1)", "inOut": "cubic-bezier(0.65, 0, 0.35, 1)" }
+  },
+  "size": {
+    "touchMin": "44px",
+    "productThumb": { "sm": "72px", "md": "96px", "lg": "128px" },
+    "categoryBubble": "72px"
+  }
+}

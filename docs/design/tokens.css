@@ -52,6 +52,12 @@
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
+  --text-xl: 1.375rem;
+  --text-xl--line-height: 1.9rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.1rem;
+  --text-3xl: 2.25rem;
+  --text-3xl--line-height: 2.6rem;
   --text-4xl: clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem);
   --text-4xl--line-height: 1.08;
   --text-5xl: clamp(2.75rem, 1.8rem + 4.2vw, 5rem);
@@ -74,22 +80,28 @@
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-}
+/* En @layer base para que las utilidades de Tailwind (font-sans, rounded-full…) las sobrescriban. */
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
-  letter-spacing: -0.02em;
-}
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
 
-/* Foco visible global */
-:focus-visible {
-  outline: 3px solid var(--color-naranja-fuerte);
-  outline-offset: 3px;
-  border-radius: 4px;
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  /* Foco visible global (sin tocar el radio del elemento: los botones son píldora) */
+  :focus-visible {
+    outline: 3px solid var(--color-naranja-fuerte);
+    outline-offset: 3px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

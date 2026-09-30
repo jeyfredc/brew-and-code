@@ -24,7 +24,7 @@ export default async function MenuPage({ params }: PageProps<"/[lang]/menu">) {
   return (
     <main id="main">
       <Container className="pb-8 pt-14 lg:pt-20">
-        <h1 className="font-display text-5xl font-extrabold">{dict.menu.title}</h1>
+        <h1 className="font-display text-4xl font-extrabold">{dict.menu.title}</h1>
         <p className="mt-4 max-w-[52ch] text-lg text-muted">{dict.menu.intro}</p>
       </Container>
       <CategoryNav dict={dict} categories={groups.map((g) => g.category)} />

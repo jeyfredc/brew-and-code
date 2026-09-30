@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { Button, type ButtonSize, type ButtonVariant } from "@/components/ui/Button";
 import type { Dictionary } from "@/dictionaries/get-dictionary";
 import { submitBooking } from "@/lib/booking/submit-booking";
@@ -19,6 +19,11 @@ const FIELD_ORDER: BookingField[] = ["name", "partySize", "date", "time"];
 const inputClasses =
   "h-11 w-full rounded-sm border border-line bg-background px-3 text-base text-foreground aria-invalid:border-2 aria-invalid:border-price";
 
+/** Sustituye {clave} en una sola pasada: el texto insertado nunca se vuelve a interpretar. */
+function fillTemplate(template: string, values: Record<string, string>): string {
+  return template.replace(/\{(\w+)\}/g, (_match, key: string) => values[key] ?? "");
+}
+
 interface Props {
   labels: Dictionary["booking"];
   lang: Locale;
@@ -29,6 +34,7 @@ interface Props {
 export function BookingDialog({ labels, lang, variant = "accent", size = "lg" }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const successTitleRef = useRef<HTMLHeadingElement>(null);
   const uid = useId();
   const titleId = `${uid}-title`;
   const [values, setValues] = useState<BookingInput>(EMPTY);
@@ -37,6 +43,11 @@ export function BookingDialog({ labels, lang, variant = "accent", size = "lg" }:
   const [status, setStatus] = useState<Status>("idle");
   const [range, setRange] = useState<{ min?: string; max?: string }>({});
   const [confirmed, setConfirmed] = useState<Booking | null>(null);
+
+  // Al confirmar se desmonta el botón enfocado: mover el foco al título evita perderlo y lo anuncia.
+  useEffect(() => {
+    if (status === "success") successTitleRef.current?.focus();
+  }, [status]);
 
   function open() {
     const today = londonToday(new Date());
@@ -114,13 +125,14 @@ export function BookingDialog({ labels, lang, variant = "accent", size = "lg" }:
         <div className="p-6">
           {status === "success" && confirmed ? (
             <div role="status">
-              <h2 id={titleId} className="font-display text-3xl font-bold">{labels.success.title}</h2>
+              <h2 id={titleId} ref={successTitleRef} tabIndex={-1} className="font-display text-3xl font-bold outline-none">{labels.success.title}</h2>
               <p className="mt-3 text-lg">
-                {labels.success.message
-                  .replace("{name}", confirmed.name)
-                  .replace("{partySize}", String(confirmed.partySize))
-                  .replace("{date}", formatIsoDate(confirmed.date, lang))
-                  .replace("{time}", confirmed.time)}
+                {fillTemplate(labels.success.message, {
+                  name: confirmed.name,
+                  partySize: String(confirmed.partySize),
+                  date: formatIsoDate(confirmed.date, lang),
+                  time: confirmed.time,
+                })}
               </p>
               <div className="mt-6"><Button variant="primary" onClick={close}>{labels.close}</Button></div>
             </div>

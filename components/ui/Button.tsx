@@ -5,10 +5,10 @@ export type ButtonVariant = "primary" | "accent" | "light" | "ghost";
 export type ButtonSize = "md" | "lg";
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-foreground text-background hover:bg-cacao dark:hover:bg-espuma",
-  accent: "bg-naranja-fuerte text-white hover:bg-naranja-profundo",
-  light: "bg-espuma text-espresso hover:bg-crema",
-  ghost: "border border-line text-foreground hover:bg-surface",
+  primary: "bg-foreground text-background enabled:hover:bg-cacao active:bg-cacao dark:enabled:hover:bg-espuma dark:active:bg-espuma",
+  accent: "bg-naranja-fuerte text-white enabled:hover:bg-naranja-profundo active:bg-naranja-profundo",
+  light: "bg-espuma text-espresso enabled:hover:bg-crema active:bg-crema",
+  ghost: "border border-line text-foreground enabled:hover:bg-surface active:bg-surface",
 };
 const sizeClasses: Record<ButtonSize, string> = { md: "h-11 px-6", lg: "h-[52px] px-7" };
 

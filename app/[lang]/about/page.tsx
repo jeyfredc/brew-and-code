@@ -24,7 +24,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
     <main id="main">
       <Container className="grid items-start gap-12 py-14 lg:grid-cols-2 lg:gap-16 lg:py-20">
         <div>
-          <h1 className="font-display text-5xl font-extrabold">{dict.about.title}</h1>
+          <h1 className="font-display text-4xl font-extrabold">{dict.about.title}</h1>
           <div className="mt-8 max-w-[60ch] space-y-5 text-lg leading-relaxed">
             <p className="text-xl">{lead}</p>
             {rest.map((paragraph) => (

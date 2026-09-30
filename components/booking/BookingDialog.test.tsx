@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import en from "@/dictionaries/en.json";
 import { submitBooking } from "@/lib/booking/submit-booking";
@@ -111,5 +111,27 @@ describe("BookingDialog", () => {
     open();
     expect(field("Your name").value).toBe("");
     expect(screen.queryByText("Table reserved")).not.toBeInTheDocument();
+  });
+
+  test("tras confirmar, el foco pasa al título de confirmación (no se pierde en el body)", async () => {
+    open();
+    fillValid();
+    send();
+    const heading = await screen.findByRole("heading", { name: "Table reserved" });
+    await waitFor(() => expect(heading).toHaveFocus()); // el foco se mueve en un efecto
+  });
+
+  test.each([
+    ["Ana $&", "Thanks, Ana $&. We've noted a table for 4"],
+    ["Jo $'", "Thanks, Jo $'. We've noted a table for 4"],
+    ["{time}", "Thanks, {time}. We've noted a table for 4"],
+  ])("el nombre %j se muestra tal cual en la confirmación", async (name, expected) => {
+    open();
+    fillValid();
+    fireEvent.change(field("Your name"), { target: { value: name } });
+    send();
+    await screen.findByText("Table reserved");
+    expect(screen.getByText(new RegExp(expected.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")))).toBeInTheDocument();
+    expect(screen.getByText(/on Friday.*2 October at 19:00\.$/)).toBeInTheDocument();
   });
 });

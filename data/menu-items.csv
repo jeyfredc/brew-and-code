@@ -1,0 +1,21 @@
+category,name_en,name_es,description_en,description_es,price_gbp,badge,image
+espresso,Espresso,Espresso,"Double shot of single-origin espresso, intense with a thick crema.","Shot doble de espresso de origen único, intenso y con crema espesa.",3.00,,
+espresso,Americano,Americano,"Espresso lengthened with hot water, smooth and clean in the cup.","Espresso alargado con agua caliente, suave y limpio en taza.",3.30,,
+espresso,Cappuccino,Cappuccino,"Espresso with steamed milk under a thick layer of creamy foam.","Espresso con leche vaporizada y una capa gruesa de espuma cremosa.",3.80,popular,cappuccino
+espresso,Vanilla latte,Latte de vainilla,"Espresso with silky steamed milk and house-made vanilla syrup.","Espresso con leche texturizada y sirope artesanal de vainilla.",4.40,,latte
+espresso,Flat white,Flat white,"Double ristretto with velvety milk and fine microfoam, served in a short cup.","Doble ristretto con leche sedosa y microespuma, servido en taza corta.",3.90,,
+espresso,House mocha,Mocha de la casa,"Espresso, melted dark chocolate and milk, finished with whipped cream.","Espresso, chocolate oscuro derretido y leche, coronado con crema batida.",4.60,house-favourite,
+espresso,Caramel macchiato,Macchiato de caramelo,"Espresso marked with foamed milk and a ribbon of salted caramel.","Espresso manchado con leche espumada y un hilo de caramelo salado.",4.20,,
+pastries,Butter croissant,Croissant de mantequilla,"Flaky and golden, baked every morning with French butter.","Hojaldrado y dorado, horneado cada mañana con mantequilla francesa.",3.20,popular,croissant
+pastries,Chocolate brownie,Brownie de chocolate,"Dense 70% cocoa brownie with walnuts and a soft centre.","Brownie denso de cacao 70% con nueces y centro húmedo.",3.50,house-favourite,brownie
+pastries,Carrot cake,Torta de zanahoria,"A slice of carrot cake with walnuts and cream cheese frosting.","Porción de torta con nueces y frosting de queso crema.",4.50,,
+pastries,Berry cheesecake,Cheesecake de frutos rojos,"Biscuit base, silky cream cheese and a strawberry and blackberry sauce.","Base de galleta, crema suave y salsa de fresa y mora.",5.20,,cheesecake
+pastries,Chocolate chip cookie,Galleta de chips de chocolate,"A big cookie, crisp at the edges and soft in the middle.","Galleta grande, crujiente por fuera y suave por dentro.",2.60,,
+sandwiches,Chicken and pesto sandwich,Sándwich de pollo y pesto,"Grilled chicken breast, basil pesto, tomato and mozzarella on ciabatta.","Pechuga de pollo a la plancha, pesto de albahaca, tomate y mozzarella en pan ciabatta.",7.50,popular,
+sandwiches,Ham and cheese club,Club de jamón y queso,"Serrano ham, Dutch cheese, lettuce and tomato on toasted sandwich bread.","Jamón serrano, queso holandés, lechuga y tomate en pan de molde tostado.",6.90,,
+sandwiches,Avocado toast,Tostada de aguacate,"Sourdough with avocado, a poached egg and sesame seeds.","Pan de masa madre con aguacate, huevo pochado y semillas de sésamo.",8.20,house-favourite,avocado-toast
+sandwiches,Ham and cheese croissant,Croissant de jamón y queso,"Butter croissant filled with ham and melted cheese, served warm.","Croissant relleno de jamón y queso gratinado, servido caliente.",5.50,,
+cold,Cold brew,Cold brew,"Coffee steeped cold for 16 hours and served over ice. No sugar added.","Café infusionado en frío durante 16 horas, servido con hielo. Sin azúcar.",4.20,popular,cold-brew
+cold,Chocolate frappé,Frappé de chocolate,"Chocolate, milk and ice blended together, topped with whipped cream and cocoa sauce.","Chocolate, leche y hielo licuados, con crema batida y salsa de cacao.",5.20,house-favourite,
+cold,Peach iced tea,Té helado de durazno,"Black tea infused with fresh peach and served over ice. Dairy free.","Té negro infusionado con durazno natural y hielo. Sin lácteos.",3.60,,iced-tea
+cold,Coconut lemonade,Limonada de coco,"Fresh lemon, coconut cream and ice, blended to order.","Limón natural, crema de coco y hielo, batida al momento.",4.00,,

@@ -43,11 +43,11 @@ describe("validateBooking", () => {
     expect(errorsOf({ time }).time).toBe("timeInvalid");
   });
   test("horario de apertura: último turno 30 min antes del cierre", () => {
-    // miércoles 2026-10-07: 07:30–17:00
-    expect(errorsOf({ date: "2026-10-07", time: "07:29" }).time).toBe("timeClosed");
-    expect(errorsOf({ date: "2026-10-07", time: "07:30" }).time).toBeUndefined();
-    expect(errorsOf({ date: "2026-10-07", time: "16:30" }).time).toBeUndefined();
-    expect(errorsOf({ date: "2026-10-07", time: "16:31" }).time).toBe("timeClosed");
+    // miércoles 2026-10-07: 06:00–20:00
+    expect(errorsOf({ date: "2026-10-07", time: "05:59" }).time).toBe("timeClosed");
+    expect(errorsOf({ date: "2026-10-07", time: "06:00" }).time).toBeUndefined();
+    expect(errorsOf({ date: "2026-10-07", time: "19:30" }).time).toBeUndefined();
+    expect(errorsOf({ date: "2026-10-07", time: "19:31" }).time).toBe("timeClosed");
     // viernes cierra a las 21:30; domingo 2026-10-04 08:30–16:00
     expect(errorsOf({ date: "2026-10-02", time: "21:00" }).time).toBeUndefined();
     expect(errorsOf({ date: "2026-10-04", time: "15:31" }).time).toBe("timeClosed");
@@ -58,8 +58,8 @@ describe("validateBooking", () => {
     expect(errorsOf({ date: "2026-09-30", time: "15:00" }).time).toBeUndefined();
   });
   test("hoy después del cierre: rechazada", () => {
-    const evening = new Date("2026-09-30T17:00:00Z"); // 18:00 BST, cerrado desde las 17:00
-    expect(errorsOf({ date: "2026-09-30", time: "18:30" }, evening).time).toBe("timeClosed");
+    const evening = new Date("2026-09-30T19:30:00Z"); // 20:30 BST, cerrado desde las 20:00
+    expect(errorsOf({ date: "2026-09-30", time: "21:00" }, evening).time).toBe("timeClosed");
   });
   test("la fecha de 'hoy' es la de Londres, no la de UTC", () => {
     const justAfterMidnightLondon = new Date("2026-09-30T23:30:00Z"); // 1 oct 00:30 BST

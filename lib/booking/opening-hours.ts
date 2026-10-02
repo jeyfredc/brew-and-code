@@ -3,10 +3,10 @@ export interface DayHours { open: string; close: string }
 /** 0 = domingo … 6 = sábado. PLACEHOLDER: horario de ejemplo hasta tener el real. */
 export const openingHours: Record<number, DayHours> = {
   0: { open: "08:30", close: "16:00" },
-  1: { open: "07:30", close: "17:00" },
-  2: { open: "07:30", close: "17:00" },
-  3: { open: "07:30", close: "17:00" },
-  4: { open: "07:30", close: "17:00" },
+  1: { open: "06:00", close: "20:00" },
+  2: { open: "06:00", close: "20:00" },
+  3: { open: "06:00", close: "20:00" },
+  4: { open: "06:00", close: "20:00" },
   5: { open: "07:30", close: "21:30" },
   6: { open: "08:00", close: "17:00" },
 };

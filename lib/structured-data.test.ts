@@ -5,7 +5,7 @@ test("CafeOrCoffeeShop con horario agrupado", () => {
   const data = cafeJsonLd();
   expect(data["@type"]).toBe("CafeOrCoffeeShop");
   expect(data.openingHoursSpecification[0]).toMatchObject({
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "07:30", closes: "17:00",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "06:00", closes: "20:00",
   });
   expect(data.address.addressCountry).toBe("GB");
 });
